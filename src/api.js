@@ -6,6 +6,13 @@ const userController = require('./controllers/userController');
 const salaController = require('./controllers/salaController');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+const cors = require('cors');
+
+const corsOptions = {
+  origin: true, 
+  optionsSuccessStatus: 200 
+};
+app.use(cors(corsOptions));
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 //entrar no site
